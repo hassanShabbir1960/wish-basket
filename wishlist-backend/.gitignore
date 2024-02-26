@@ -1,0 +1,37 @@
+# Ignore all files and folders starting with a dot
+.*
+
+# Except for the .gitignore file itself
+!.gitignore
+
+# Ignore Python compiled files and directories
+__pycache__/
+*.py[cod]
+
+# Ignore image files by extension
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.tiff
+*.bmp
+*.svg
+
+# If you want to ignore other specific image formats, add them similarly.
+
+# Ignore cache files and directories for popular IDEs and text editors,
+# such as VSCode, PyCharm, Sublime Text, etc.
+.vscode/
+.idea/
+*.sublime*
+
+# Ignore OS generated files
+.DS_Store # macOS desktop services store
+Thumbs.db # Windows thumbnail cache
+
+# Ignore other common directories that should not be committed
+node_modules/
+venv/
+env/
+dist/
+build/
