@@ -3,7 +3,6 @@ from .models import Product
 
 class ProductForm(forms.ModelForm):
     upload_image = forms.ImageField(required=False, label='Image')
-
     class Meta:
         model = Product
         fields = ['id', 'name', 'price', 'category', 'upload_image']
