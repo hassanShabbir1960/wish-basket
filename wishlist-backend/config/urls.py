@@ -34,10 +34,13 @@ from django.contrib import admin
 from django.urls import path
 
 import products.views
-
+from wishlist.views import WishlistAPI
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("products/", products.views.get_products),
-    path("products/<str:category>", products.views.get_products)
+    path("products/<str:category>", products.views.get_products),
+    path("wishlist/",WishlistAPI.as_view(),name='wishlist-list'),
+    path("wishlist/<uuid:wishlist_id>/", WishlistAPI.as_view(), name="wishlist-detail"),
+
 ]
 

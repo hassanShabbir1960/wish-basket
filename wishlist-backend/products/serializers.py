@@ -14,10 +14,8 @@ class Base64BytesField(serializers.Field):
             raise serializers.ValidationError('This field requires a Base64 encoded string.') from e
 
 from .models import Product
-
 class ProductSerializer(serializers.ModelSerializer):
     image = Base64BytesField(allow_null=True, required=False)
-
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ('id','name','price','category','image')
